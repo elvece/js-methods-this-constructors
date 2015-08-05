@@ -11,14 +11,21 @@ Taxi.prototype.addPassenger = function(passengerName) {
 };
 
 Taxi.prototype.passengerCount = function(){
-  if (this.passengers.length === 0){
-    return this.passengers;
+  return this.passengers.length;
+};
+
+Taxi.prototype.full = function(){
+  if (this.passengerCount() == this.maxNumberOfPassengers){
+    return true;
   }
-  else {
-    return this.passengers.length;
+  else{
+    return false;
   }
 };
 
+Taxi.prototype.dropOffPassengers = function(){
+  return this.passengers = [];
+};
 
 
 // DO NOT MODIFY BELOW THIS COMMENT:
