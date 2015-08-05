@@ -14,7 +14,7 @@ BookReader.prototype.nextPage = function() {
 };
 
 BookReader.prototype.previousPage = function() {
-  if (this.currentPage > this.book.length -1){
+  if (this.currentPage > 0){
     this.currentPage -= 1;
     return this.book[this.currentPage];
   }
@@ -24,11 +24,16 @@ BookReader.prototype.previousPage = function() {
 };
 
 BookReader.prototype.pagesLeft = function() {
-  // your code here
+  return this.book.length - this.currentPage -1;
 };
 
 BookReader.prototype.encouragement = function() {
-  // your code here
+  if (this.pagesLeft() === 1){
+    return "Keep going, this book is good 'til the last drop!";
+  }
+  else{
+    return "Keep going, only " + this.pagesLeft() + " pages left after this one!";
+  }
 };
 
 // DO NOT MODIFY BELOW THIS COMMENT:
