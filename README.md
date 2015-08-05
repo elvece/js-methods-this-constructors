@@ -1,6 +1,6 @@
 ##JS Methods, This, and Constructors
 
-***This repo contains my solution to the following exercise:***
+***This repo contains my solution to the following exercise:***3
 
 ### Setup Instructions
 
